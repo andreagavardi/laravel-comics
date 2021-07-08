@@ -73,3 +73,71 @@ a.active {
   color: #1c1c1c;
   font-weight: 800;
 }
+
+#site_footer {
+  background-image: url(../img/footer-bg.jpg);
+  background-size: cover;
+}
+#site_footer .container .footer_top {
+  background-image: url(../img/dc-logo-bg.png);
+  background-repeat: no-repeat;
+  background-position: right;
+  padding: 2rem 0;
+}
+#site_footer .container .footer_top .menu_top {
+  display: flex;
+}
+#site_footer .container .footer_top .menu_top .column {
+  margin-right: 2rem;
+}
+#site_footer .container .footer_top .menu_top .column h3 {
+  color: white;
+  text-transform: uppercase;
+}
+#site_footer .container .footer_top .menu_top .column li {
+  list-style: none;
+}
+#site_footer .container .footer_top .menu_top .column li a {
+  text-decoration: none;
+  color: #7d7e7a;
+  font-size: 0.75rem;
+}
+#site_footer .container .footer_top .menu_bottom {
+  width: 40%;
+}
+#site_footer .container .footer_top .menu_bottom p {
+  color: #7d7e7a;
+  font-size: 0.75rem;
+}
+#site_footer .footer_bottom {
+  background-color: #303030;
+}
+#site_footer .footer_bottom .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 0;
+}
+#site_footer .footer_bottom .container .signup a {
+  border: 2px solid #0382f9;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 0.5rem 1rem;
+  font-weight: 800;
+}
+#site_footer .footer_bottom .container .socials {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#site_footer .footer_bottom .container .socials a {
+  color: #0382f9;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 1.25rem;
+}
+#site_footer .footer_bottom .container .socials img {
+  margin-left: 1rem;
+}
