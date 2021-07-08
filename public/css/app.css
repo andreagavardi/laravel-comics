@@ -1,1 +1,75 @@
+@import url(https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap);
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
+body {
+  font-family: "PT Sans Narrow", sans-serif;
+}
+
+.container {
+  width: 1170px;
+  margin: auto;
+}
+
+a {
+  color: #1c1c1c;
+}
+a.active {
+  color: #0382f9;
+  border-bottom: 4px solid #0382f9;
+}
+
+.top {
+  background-color: #0382f9;
+}
+.top .container {
+  display: flex;
+  justify-content: flex-end;
+}
+.top .container span {
+  color: white;
+  font-size: 0.5rem;
+  font-weight: 600;
+  padding: 0.25rem 1rem;
+}
+
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+#navbar .logo img {
+  width: 70px;
+}
+#navbar .nav_links a {
+  text-decoration: none;
+  text-transform: uppercase;
+  margin: 0 1rem;
+  font-size: 0.9rem;
+  font-weight: 800;
+  padding-bottom: 1.5rem;
+}
+#navbar .nav_search {
+  border-bottom: 2px solid #0382f9;
+}
+#navbar .nav_search input {
+  border-style: none;
+  text-align: end;
+  width: 100px;
+}
+#navbar .nav_search input::-moz-placeholder {
+  color: #1c1c1c;
+  font-weight: 800;
+}
+#navbar .nav_search input:-ms-input-placeholder {
+  color: #1c1c1c;
+  font-weight: 800;
+}
+#navbar .nav_search input::placeholder {
+  color: #1c1c1c;
+  font-weight: 800;
+}
