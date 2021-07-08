@@ -11,7 +11,7 @@
         @foreach($comics_collection as $comic)
         <div class="comic">
             <img src="{{$comic['thumb']}}" alt="">
-            <h3>{{$comic['series']}}</h3>
+            <h4>{{$comic['series']}}</h4>
         </div>
         @endforeach
     </div>

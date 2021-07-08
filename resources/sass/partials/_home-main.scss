@@ -17,3 +17,28 @@
         }
     }
 }
+
+.comics_series{
+    background-color: $dark_color;
+    padding: 3rem 0;
+    .container{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        .comic{
+            max-height: 200px;
+            width: calc(100% / 6 - 2rem);
+            margin: 0 1rem;
+            img{
+               height: 70%;
+               width: 100%;
+               object-fit: cover;
+               OBJECT-POSITION: top;
+            }
+            h4{
+                color: white;
+                text-transform: uppercase;
+            }
+        }
+    }
+}
