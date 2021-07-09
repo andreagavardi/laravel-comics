@@ -10,7 +10,12 @@ body {
 }
 
 .container {
-  width: 65%;
+  max-width: 65%;
+  margin: auto;
+}
+
+.container_sm {
+  max-width: 50%;
   margin: auto;
 }
 
@@ -20,6 +25,10 @@ a {
 a.active {
   color: #0382f9;
   border-bottom: 4px solid #0382f9;
+}
+
+.yellow {
+  color: #acf09b;
 }
 
 .top {
@@ -76,7 +85,7 @@ a.active {
 
 .jumbotron {
   position: relative;
-  height: 65vh;
+  height: 270px;
   background-image: url(../img/jumbotron.jpg);
   background-size: cover;
 }
@@ -112,11 +121,76 @@ a.active {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  OBJECT-POSITION: top;
+  -o-object-position: top;
+     object-position: top;
 }
 .comics_series .container .comic h4 {
   color: white;
   text-transform: uppercase;
+}
+
+.thumb {
+  position: absolute;
+  display: inline-block;
+  bottom: -35px;
+  border: 1px solid white;
+}
+.thumb img {
+  height: 200px;
+}
+.thumb a {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 0.75rem;
+  text-align: center;
+  padding: 0.25rem;
+  background-color: #23a9d9;
+  display: block;
+  width: 100%;
+}
+
+.banner {
+  background-color: #0382f9;
+  height: 50px;
+  width: 100%;
+}
+
+.comic_details {
+  padding: 2.5rem 0;
+}
+.comic_details .col_left {
+  width: 70%;
+}
+.comic_details h1 {
+  text-transform: uppercase;
+  font-size: 1.45rem;
+}
+
+.price_details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #57ba59;
+  font-weight: 600;
+  color: white;
+}
+.price_details .sell {
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 1;
+  padding: 0.5rem;
+}
+.price_details .check_availability {
+  padding: 0.5rem;
+}
+.price_details .check_availability a {
+  color: white;
+  text-decoration: none;
 }
 
 #site_footer {
@@ -127,6 +201,7 @@ a.active {
   background-image: url(../img/dc-logo-bg.png);
   background-repeat: no-repeat;
   background-position: right;
+  background-size: 55%;
   padding: 2rem 0;
 }
 #site_footer .container .footer_top .menu_top {
