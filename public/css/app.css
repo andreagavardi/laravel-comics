@@ -163,34 +163,57 @@ a.active {
 .comic_details {
   padding: 2.5rem 0;
 }
-.comic_details .col_left {
-  width: 70%;
+.comic_details .container_sm {
+  display: flex;
 }
-.comic_details h1 {
+.comic_details .container_sm .col_left {
+  width: 65%;
+  padding-right: 1rem;
+}
+.comic_details .container_sm .col_left h1 {
   text-transform: uppercase;
   font-size: 1.45rem;
+  color: #1c1c1c;
 }
-
-.price_details {
+.comic_details .container_sm .col_left .price_details {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #57ba59;
   font-weight: 600;
+  font-size: 0.9rem;
   color: white;
 }
-.price_details .sell {
+.comic_details .container_sm .col_left .price_details .sell {
   display: flex;
   justify-content: space-between;
   flex-grow: 1;
+  padding: 1rem;
+}
+.comic_details .container_sm .col_left .price_details .check_availability {
   padding: 0.5rem;
 }
-.price_details .check_availability {
-  padding: 0.5rem;
-}
-.price_details .check_availability a {
+.comic_details .container_sm .col_left .price_details .check_availability a {
   color: white;
   text-decoration: none;
+}
+.comic_details .container_sm .col_right {
+  width: 35%;
+  padding-left: 0.5rem;
+}
+.comic_details .container_sm .col_right h3 {
+  text-transform: uppercase;
+  text-align: right;
+  font-size: 0.75rem;
+  color: grey;
+}
+.comic_details .container_sm .col_right img {
+  max-width: 100%;
+}
+
+.comic_details_bottom {
+  background-color: #f6f6f6;
+  border-top: 1px solid grey;
 }
 
 #site_footer {

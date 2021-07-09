@@ -30,33 +30,58 @@
 }
 .comic_details {
     padding: 2.5rem 0;
-    .col_left {
-        width: 70%;
-    }
-
-    h1 {
-        text-transform: uppercase;
-        font-size: 1.45rem;
-    }
-}
-.price_details {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: $bg_green;
-    font-weight: 600;
-    color: white;
-    .sell {
+    .container_sm {
         display: flex;
-        justify-content: space-between;
-        flex-grow: 1;
-        padding: 0.5rem;
-    }
-    .check_availability {
-        padding: 0.5rem;
-        a {
-            color: white;
-            text-decoration: none;
+
+        .col_left {
+            width: 65%;
+            padding-right: 1rem;
+            h1 {
+                text-transform: uppercase;
+                font-size: 1.45rem;
+                color: $dark_color;
+            }
+
+            .price_details {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                background-color: $bg_green;
+                font-weight: 600;
+                font-size: 0.9rem;
+                color: white;
+                .sell {
+                    display: flex;
+                    justify-content: space-between;
+                    flex-grow: 1;
+                    padding: 1rem;
+                }
+                .check_availability {
+                    padding: 0.5rem;
+                    a {
+                        color: white;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+        .col_right {
+            width: 35%;
+            padding-left: 0.5rem;
+            h3 {
+                text-transform: uppercase;
+                text-align: right;
+                font-size: 0.75rem;
+                color: grey;
+            }
+            img {
+                max-width: 100%;
+            }
         }
     }
+}
+
+.comic_details_bottom {
+    background-color: #f6f6f6;
+    border-top: 1px solid grey;
 }

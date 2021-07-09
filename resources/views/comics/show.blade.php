@@ -30,11 +30,16 @@
                 </div>
 
             </div>
+            <p>{{$comic['description']}}</p>
         </div>
         <div class="col_right">
-
+            <h3>advertisement</h3>
+            <img src="{{asset('img/adv.jpg')}}" alt="Pubblicità">
         </div>
-
+    </div>
+</div>
+<div class="comic_details_bottom">
+    <div class="container_sm">
 
     </div>
 </div>
