@@ -91,7 +91,34 @@
             </div>
 
         </div>
-        <div class="dc_banner">
+
+    </div>
+    <div class="dc_banner ">
+        <div class="container_sm">
+            <div class="col_3">
+                <span>
+                    digital comics
+                </span>
+                <img src="{{asset('img/buy-comics-digital-comics.png')}}" alt="">
+            </div>
+            <div class="col_3">
+                <span>
+                    shop dc
+                </span>
+                <img src="{{asset('img/buy-comics-merchandise.png')}}" alt="">
+            </div>
+            <div class="col_3">
+                <span>
+                    comic shop locator
+                </span>
+                <img src="{{asset('img/buy-comics-shop-locator.png')}}" alt="">
+            </div>
+            <div class="col_3">
+                <span>
+                    subscriptions
+                </span>
+                <img src="{{asset('img/buy-comics-subscriptions.png')}}" alt="">
+            </div>
 
         </div>
     </div>

@@ -15,6 +15,9 @@ body {
     max-width: 55%;
     margin: auto;
 }
+.col_3 {
+    width: calc(100% / 4);
+}
 .col_6 {
     width: calc(100% / 2);
 }

@@ -84,7 +84,7 @@
 
 .comic_details_bottom {
     background-color: #f6f6f6;
-    border-top: 1px solid grey;
+    border-top: 1px solid #d8d8d8;
     .container_sm {
         display: flex;
         flex-wrap: wrap;
@@ -99,7 +99,7 @@
             display: flex;
             justify-content: space-between;
             font-size: 0.85rem;
-            border-bottom: 1px solid grey;
+            border-bottom: 1px solid $text_grey;
             padding: 1rem 0;
             .title {
                 width: 60%;
@@ -111,7 +111,7 @@
         }
         .artists,
         .series {
-            border-top: 1px solid grey;
+            border-top: 1px solid $text_grey;
         }
 
         .specs {
@@ -125,9 +125,28 @@
                 }
             }
         }
-        .dc_banner {
-            margin-top: 3rem;
-            width: 100%;
+    }
+    .dc_banner {
+        margin-top: 6rem;
+        width: 100%;
+
+        border-top: 1px solid $text_grey;
+        .col_3 {
+            display: flex;
+            justify-content: space-between;
+            padding: 1rem 0.5rem;
+            text-transform: uppercase;
+            width: calc(100% / 4);
+            color: $text_grey;
+            font-weight: 600;
+            font-size: 0.8rem;
+            border-left: 1px solid $text_grey;
+            img {
+                height: 40px;
+            }
+            &:last-child {
+                border-right: 1px solid $text_grey;
+            }
         }
     }
 }
