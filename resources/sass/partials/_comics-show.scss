@@ -84,4 +84,7 @@
 .comic_details_bottom {
     background-color: #f6f6f6;
     border-top: 1px solid grey;
+    .container_sm {
+        display: flex;
+    }
 }

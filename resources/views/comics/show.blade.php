@@ -40,7 +40,35 @@
 </div>
 <div class="comic_details_bottom">
     <div class="container_sm">
+        <div class="col_6">
+            <h3>Talent</h3>
+            <div class="artists">
+                <span>Art By:</span>
+                <div class="artists_details">
+                    @foreach($comic['artists'] as $artist)
+                    <span>{{$artist}}</span>
+                    @if(!$loop->last)
+                    <span>,</span>
+                    @endif
+                    @endforeach
+                </div>
+            </div>
+            <div class="writers">
+                <span>Written By:</span>
+                <div class="writers_details">
+                    @foreach($comic['writers'] as $writer)
+                    <span>{{$writer}}</span>
+                    @if(!$loop->last)
+                    <span>,</span>
+                    @endif
+                    @endforeach
 
+                </div>
+            </div>
+        </div>
+        <div class="col_6">
+            <h3>Specs</h3>
+        </div>
     </div>
 </div>
 
