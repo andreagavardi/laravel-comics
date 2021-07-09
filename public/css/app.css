@@ -48,10 +48,10 @@ a.active {
 #navbar .nav_links a {
   text-decoration: none;
   text-transform: uppercase;
-  margin: 0 1rem;
+  margin: 0 0.5rem;
   font-size: 0.9rem;
   font-weight: 800;
-  padding-bottom: 1.5rem;
+  padding-bottom: 2.45rem;
 }
 #navbar .nav_search {
   border-bottom: 2px solid #0382f9;

@@ -14,7 +14,7 @@
              </div>
              <div class="nav_links">
                  <a href="#">characters</a>
-                 <a href="#" class="active">comics</a>
+                 <a href="{{route('comics')}}" class="{{Route::currentRouteName()=== 'comics'? 'active': ''}}">comics</a>
                  <a href="#">movies</a>
                  <a href="#">tv</a>
                  <a href="#">games</a>
