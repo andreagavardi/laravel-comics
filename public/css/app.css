@@ -15,7 +15,7 @@ body {
 }
 
 .container_sm {
-  max-width: 50%;
+  max-width: 55%;
   margin: auto;
 }
 
@@ -178,6 +178,7 @@ a.active {
   text-transform: uppercase;
   font-size: 1.45rem;
   color: #1c1c1c;
+  margin-bottom: 1rem;
 }
 .comic_details .container_sm .col_left .price_details {
   display: flex;
@@ -221,6 +222,57 @@ a.active {
 }
 .comic_details_bottom .container_sm {
   display: flex;
+  flex-wrap: wrap;
+}
+.comic_details_bottom .container_sm h3 {
+  margin: 1rem 0;
+}
+.comic_details_bottom .container_sm .artists,
+.comic_details_bottom .container_sm .writers,
+.comic_details_bottom .container_sm .series,
+.comic_details_bottom .container_sm .specs_price,
+.comic_details_bottom .container_sm .sales_date {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  border-bottom: 1px solid grey;
+  padding: 1rem 0;
+}
+.comic_details_bottom .container_sm .artists .title,
+.comic_details_bottom .container_sm .writers .title,
+.comic_details_bottom .container_sm .series .title,
+.comic_details_bottom .container_sm .specs_price .title,
+.comic_details_bottom .container_sm .sales_date .title {
+  width: 60%;
+}
+.comic_details_bottom .container_sm .artists .artists_details,
+.comic_details_bottom .container_sm .artists .writers_details,
+.comic_details_bottom .container_sm .writers .artists_details,
+.comic_details_bottom .container_sm .writers .writers_details,
+.comic_details_bottom .container_sm .series .artists_details,
+.comic_details_bottom .container_sm .series .writers_details,
+.comic_details_bottom .container_sm .specs_price .artists_details,
+.comic_details_bottom .container_sm .specs_price .writers_details,
+.comic_details_bottom .container_sm .sales_date .artists_details,
+.comic_details_bottom .container_sm .sales_date .writers_details {
+  color: #0382f9;
+}
+.comic_details_bottom .container_sm .artists,
+.comic_details_bottom .container_sm .series {
+  border-top: 1px solid grey;
+}
+.comic_details_bottom .container_sm .specs {
+  padding-left: 1.5rem;
+}
+.comic_details_bottom .container_sm .specs .series a {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #0382f9;
+  font-weight: 600;
+}
+.comic_details_bottom .container_sm .dc_banner {
+  margin-top: 3rem;
+  width: 100%;
 }
 
 #site_footer {

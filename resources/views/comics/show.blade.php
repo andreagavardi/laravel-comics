@@ -43,7 +43,7 @@
         <div class="col_6">
             <h3>Talent</h3>
             <div class="artists">
-                <span>Art By:</span>
+                <span class="title">Art By:</span>
                 <div class="artists_details">
                     @foreach($comic['artists'] as $artist)
                     <span>{{$artist}}</span>
@@ -54,7 +54,7 @@
                 </div>
             </div>
             <div class="writers">
-                <span>Written By:</span>
+                <span class="title">Written By:</span>
                 <div class="writers_details">
                     @foreach($comic['writers'] as $writer)
                     <span>{{$writer}}</span>
@@ -66,8 +66,33 @@
                 </div>
             </div>
         </div>
-        <div class="col_6">
+        <div class="col_6 specs">
             <h3>Specs</h3>
+            <div class="series">
+                <div class="col_6">
+                    <span class="title">Series:</span>
+                </div>
+                <div class="col_6">
+                    <a href="#">{{$comic['series']}}</a>
+                </div>
+
+            </div>
+            <div class="specs_price">
+                <div class="col_6">
+                    <span>U.S. Price :</span>
+                </div>
+                <div class="col_6">
+                    <span>{{$comic['price']}}</span>
+                </div>
+            </div>
+            <div class="sales_date">
+                <div class="col_6">On Sale Date:</div>
+                <div class="col_6">{{$comic['sale_date']}}</div>
+            </div>
+
+        </div>
+        <div class="dc_banner">
+
         </div>
     </div>
 </div>

@@ -30,7 +30,12 @@ Route::get('/comics', function () {
 
 Route::get('/comics/{id}', function ($id) {
     $comics = config('comics');
-    $comic = $comics[$id];
+    if (is_numeric($id) && $id < count($comics) && $id >= 0) {
+
+        $comic = $comics[$id];
+    } else {
+        abort(404);
+    }
     //ddd($comic);
     return view('comics.show', compact('comic'));
 })->name('comic');
