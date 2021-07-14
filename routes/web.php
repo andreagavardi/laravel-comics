@@ -41,4 +41,6 @@ Route::get('/comics/{id}', function ($id) {
 })->name('comic');
 
 
+//Route::resource('comics', 'ComicController'); //esercizio completo con model e controller
+
 /* END Comics routes */
