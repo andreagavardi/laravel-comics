@@ -20,6 +20,9 @@
         background-color: #23a9d9;
         display: block;
         width: 100%;
+        &:hover {
+            text-decoration: none;
+        }
     }
 }
 

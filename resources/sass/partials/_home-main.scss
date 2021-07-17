@@ -40,6 +40,11 @@
                 color: white;
                 text-transform: uppercase;
             }
+            a {
+                &:hover {
+                    text-decoration: none;
+                }
+            }
         }
     }
 }

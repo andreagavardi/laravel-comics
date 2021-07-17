@@ -68,7 +68,13 @@ a.active {
   margin: 0 0.5rem;
   font-size: 0.9rem;
   font-weight: 800;
-  padding-bottom: 2.45rem;
+  padding-bottom: 2.3rem;
+}
+#navbar .nav_links a.admin {
+  font-size: 1.25rem;
+  border: 2px solid blue;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.5rem;
 }
 #navbar .nav_search {
   border-bottom: 2px solid #0382f9;
@@ -138,6 +144,9 @@ a.active {
   color: white;
   text-transform: uppercase;
 }
+.comics_series .container .comic a:hover {
+  text-decoration: none;
+}
 
 .thumb {
   position: absolute;
@@ -162,6 +171,9 @@ a.active {
   background-color: #23a9d9;
   display: block;
   width: 100%;
+}
+.thumb a:hover {
+  text-decoration: none;
 }
 
 .banner {

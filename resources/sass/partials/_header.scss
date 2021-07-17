@@ -28,7 +28,13 @@
             margin: 0 0.5rem;
             font-size: 0.9rem;
             font-weight: 800;
-            padding-bottom: 2.45rem;
+            padding-bottom: 2.3rem;
+            &.admin {
+                font-size: 1.25rem;
+                border: 2px solid blue;
+                padding: 0.25rem 0.5rem;
+                border-radius: 0.5rem;
+            }
         }
     }
 

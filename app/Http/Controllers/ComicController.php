@@ -87,7 +87,7 @@ class ComicController extends Controller
      */
     public function edit(Comic $comic)
     {
-        //
+        return view('comics.edit', compact('comic'));
     }
 
     /**
@@ -110,7 +110,7 @@ class ComicController extends Controller
             'author' => 'required | max:50'
         ]);
         $comic->update($validated);
-        return redirect()->route('comics.show', $comic->id);
+        return redirect()->route('admin.index');
     }
 
     /**
