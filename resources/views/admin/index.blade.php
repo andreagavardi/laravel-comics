@@ -37,11 +37,42 @@
                 <td>{{$comic->updated_at}}</td>
                 <th><a href="{{route('comics.show',$comic->id)}}">VIEW |</a>
                     <a href="{{route('comics.edit',$comic->id)}}">EDIT |</a>
-                    <a href="">DELETE</a>
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#ModalId">
+                        DELETE
+                    </button>
+                    <!--END Button trigger modal -->
                 </th>
             </tr>
             @endforeach
         </tbody>
     </table>
+    <!-- Modal -->
+    <div class="modal fade" id="ModalId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title"> WARNING!!</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+                    You're going to delete this items forever
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <form action="{{route('comics.destroy',$comic->id)}}" method="post">
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit" class="btn btn-danger">DELETE</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--END Modal -->
+
 </div>
 @endsection

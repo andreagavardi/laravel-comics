@@ -1,6 +1,6 @@
-@extends('layout.app')
+@extends('layout.admin')
 
-@section('title','Add Comic')
+@section('title','Edit Comic')
 
 
 @section('main_content')

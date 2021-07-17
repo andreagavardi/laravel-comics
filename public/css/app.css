@@ -131,7 +131,7 @@ a.active {
   margin: 0 1rem;
 }
 .comics_series .container .comic img {
-  height: 70%;
+  height: 260px;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;

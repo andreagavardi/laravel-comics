@@ -63,7 +63,7 @@ class ComicController extends Controller
         //ddd($validated);
         Comic::create($validated);
 
-        return redirect()->route('comics.index');
+        return redirect()->route('admin.index');
     }
 
     /**
@@ -121,6 +121,7 @@ class ComicController extends Controller
      */
     public function destroy(Comic $comic)
     {
-        //
+        $comic->delete();
+        return redirect()->route('admin.index');
     }
 }
