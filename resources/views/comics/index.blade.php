@@ -13,8 +13,11 @@
 
         <div class="comic">
             <a href="{{route('comic',['id'=>$index])}}">
+
                 <img src="{{$comic['thumb']}}" alt="">
                 <h4>{{$comic['series']}}</h4>
+
+
             </a>
         </div>
 

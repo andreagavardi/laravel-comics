@@ -96,6 +96,7 @@ a.active {
   height: 270px;
   background-image: url(../img/jumbotron.jpg);
   background-size: cover;
+  margin-bottom: 0;
 }
 .jumbotron .series {
   position: absolute;
@@ -120,8 +121,8 @@ a.active {
   justify-content: center;
 }
 .comics_series .container .comic {
-  max-height: 200px;
-  width: calc(100% / 6 - 2rem);
+  max-height: 260px;
+  width: calc(100% / 4 - 2rem);
   margin: 0 1rem;
 }
 .comics_series .container .comic img {
@@ -133,6 +134,7 @@ a.active {
      object-position: top;
 }
 .comics_series .container .comic h4 {
+  font-size: 1.25rem;
   color: white;
   text-transform: uppercase;
 }

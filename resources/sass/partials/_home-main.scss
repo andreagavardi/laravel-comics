@@ -3,6 +3,7 @@
     height: 270px;
     background-image: url(../img/jumbotron.jpg);
     background-size: cover;
+    margin-bottom: 0;
     .series {
         position: absolute;
         bottom: -20px;
@@ -25,8 +26,8 @@
         flex-wrap: wrap;
         justify-content: center;
         .comic {
-            max-height: 200px;
-            width: calc(100% / 6 - 2rem);
+            max-height: 260px;
+            width: calc(100% / 4 - 2rem);
             margin: 0 1rem;
             img {
                 height: 70%;
@@ -35,6 +36,7 @@
                 object-position: top;
             }
             h4 {
+                font-size: 1.25rem;
                 color: white;
                 text-transform: uppercase;
             }
