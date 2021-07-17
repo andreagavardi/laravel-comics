@@ -10,7 +10,7 @@
     <div class="container">
         <nav id="navbar">
             <div class="logo">
-                <a href="{{route('home')}}"><img src="../img/dc-logo.png" alt="logo dc"></a>
+                <a href="{{route('home')}}"><img src="{{asset('img/dc-logo.png')}}" alt="logo dc"></a>
             </div>
             <div class="nav_links">
                 <a href="#">characters</a>

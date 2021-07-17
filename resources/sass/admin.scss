@@ -1,0 +1,17 @@
+@import "partials/variables";
+.container {
+    .table {
+        th {
+            text-align: center;
+            a {
+                &:hover {
+                    text-decoration: none;
+                    color: $primary_blue;
+                }
+                i {
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
+}

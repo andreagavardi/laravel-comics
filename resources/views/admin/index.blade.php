@@ -6,6 +6,7 @@
     <table class="table">
         <thead>
             <tr>
+                <th><a href="{{route('comics.create')}}">NEW COMIC <br><i class="far fa-plus-square"></i></a></th>
                 <th>ID</th>
                 <th>TITOLO</th>
                 <th>IMAGE</th>
@@ -23,7 +24,7 @@
         <tbody>
             @foreach($comics as $comic)
             <tr>
-
+                <td></td>
                 <td scope="row">{{$comic->id}}</td>
                 <td>{{$comic->title}}</td>
                 <td><img height="150" src="{{$comic->thumb}}" alt="{{$comic->title}}"></td>
@@ -34,8 +35,8 @@
                 <td>{{$comic->author}}</td>
                 <td>{{$comic->created_at}}</td>
                 <td>{{$comic->updated_at}}</td>
-                <th><a href="{{route('comics.show',$comic->id)}}">VIEW</a>
-                    <a href="{{route('comics.edit',$comic->id)}}">EDIT</a>
+                <th><a href="{{route('comics.show',$comic->id)}}">VIEW |</a>
+                    <a href="{{route('comics.edit',$comic->id)}}">EDIT |</a>
                     <a href="">DELETE</a>
                 </th>
             </tr>

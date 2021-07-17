@@ -1,0 +1,10 @@
+.container .table th {
+  text-align: center;
+}
+.container .table th a:hover {
+  text-decoration: none;
+  color: #0382f9;
+}
+.container .table th a i {
+  font-size: 1.5rem;
+}
