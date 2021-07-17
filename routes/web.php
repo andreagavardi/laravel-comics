@@ -1,5 +1,6 @@
 <?php
 
+use Faker\Guesser\Name;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,20 +14,25 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-
-    return view('home');
-})->name('home');
+Route::get('/', 'PageController@index')->name('home');
 
 
 /* Comics routes */
-Route::get('/comics', function () {
+/* Route::get('/comics', function () {
     $comics = config('comics');
     $comics_collection = collect($comics);
 
 
     return view('comics.index', compact('comics_collection'));
 })->name('comics');
+
+Route::get('/comics/create', function () {
+
+    return view('comics.create');
+})->name('comics.create');
+
+Route::post('/comics', function () {
+})->name('comics.store');
 
 Route::get('/comics/{id}', function ($id) {
     $comics = config('comics');
@@ -38,9 +44,9 @@ Route::get('/comics/{id}', function ($id) {
     }
     //ddd($comic);
     return view('comics.show', compact('comic'));
-})->name('comic');
+})->name('comic'); */
 
 
-//Route::resource('comics', 'ComicController'); //esercizio completo con model e controller
+Route::resource('comics', 'ComicController'); //esercizio completo con model e controller
 
 /* END Comics routes */

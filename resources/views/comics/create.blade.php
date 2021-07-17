@@ -6,6 +6,7 @@
 @section('main_content')
 <div class="container d-flex flex-column">
     <h1 class="align-self-center mt-2">Aggiungi un fumetto</h1>
+    @include('partials.errors')
     <form action="{{route('comics.store')}}" method="POST">
         @csrf
         <div class="form-group">

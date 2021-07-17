@@ -14,6 +14,7 @@ class ComicController extends Controller
      */
     public function index()
     {
+        $comics = Comic::all();
         //$comics = Comic::all();
         //dd($comics);
         return view('comics.index', compact('comics'));
@@ -37,6 +38,7 @@ class ComicController extends Controller
      */
     public function store(Request $request)
     {
+        /* senza validazione
         $comic = new Comic();
         $comic->title = $request->title;
         $comic->description = $request->description;
@@ -47,7 +49,19 @@ class ComicController extends Controller
         $comic->type = $request->type;
         $comic->author = $request->author;
         $comic->save();
-        //dd($comic);
+        //dd($comic); */
+        $validated = $request->validate([
+            'title' => 'required | max:100 | min:5',
+            'description' => 'nullable',
+            'thumb' => 'nullable',
+            'price' => 'required | numeric',
+            'series' => 'nullable | max:100',
+            'sale_date' => 'nullable | date',
+            'type' => 'nullable | max:50',
+            'author' => 'required | max:50'
+        ]);
+        //ddd($validated);
+        Comic::create($validated);
 
         return redirect()->route('comics.index');
     }
@@ -62,6 +76,7 @@ class ComicController extends Controller
     {
         //dd($comic);
         //return view('comics.show', compact('comic'));
+        return view('comics.show', compact('comic'));
     }
 
     /**
@@ -84,7 +99,18 @@ class ComicController extends Controller
      */
     public function update(Request $request, Comic $comic)
     {
-        //
+        $validated = $request->validate([
+            'title' => 'required | max:100 | min:5',
+            'description' => 'nullable',
+            'thumb' => 'nullable',
+            'price' => 'required | numeric',
+            'series' => 'nullable | max:100',
+            'sale_date' => 'nullable | date',
+            'type' => 'nullable | max:50',
+            'author' => 'required | max:50'
+        ]);
+        $comic->update($validated);
+        return redirect()->route('comics.show', $comic->id);
     }
 
     /**

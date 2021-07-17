@@ -14,7 +14,7 @@
             </div>
             <div class="nav_links">
                 <a href="#">characters</a>
-                <a href="{{route('comics')}}" class="{{Str::contains(Route::currentRouteName(),'comic')? 'active': ''}}">comics</a> <!-- route(comics.index) -->
+                <a href="{{route('comics.index')}}" class="{{Str::contains(Route::currentRouteName(),'comic')? 'active': ''}}">comics</a> <!-- route(comics.index) -->
                 <a href="#">movies</a>
                 <a href="#">tv</a>
                 <a href="#">games</a>

@@ -8,14 +8,14 @@
 </div>
 <div class="comics_series">
     <div class="container">
-        @foreach($comics_collection as $index=>$comic)
+        @foreach($comics as $comic)
 
 
         <div class="comic">
-            <a href="{{route('comic',['id'=>$index])}}">
+            <a href="{{route('comics.show',$comic->id)}}">
 
-                <img src="{{$comic['thumb']}}" alt="">
-                <h4>{{$comic['series']}}</h4>
+                <img src="{{$comic->thumb}}" alt="{{$comic->title}}">
+                <h4>{{$comic->series}}</h4>
 
 
             </a>

@@ -7,7 +7,7 @@
 
         <div class="thumb">
             <img src="{{$comic['thumb']}}" alt="">
-            <a href="{{route('comics')}}">View Gallery</a>
+            <a href="{{route('comics.index')}}">View Gallery</a>
         </div>
     </div>
 </div>
@@ -16,12 +16,12 @@
 
     <div class="container_sm">
         <div class="col_left">
-            <h1>{{$comic['title']}}</h1>
+            <h1>{{$comic->title}}</h1>
             <div class="price_details">
                 <div class="sell">
                     <div class="price">
                         <span class="yellow">U.S. Price:</span>
-                        <span> {{$comic['price']}}</span>
+                        <span> {{$comic->price}}</span>
                     </div>
                     <div><span class="yellow">AVAILABLE</span></div>
                 </div>
@@ -30,7 +30,7 @@
                 </div>
 
             </div>
-            <p>{{$comic['description']}}</p>
+            <p>{{$comic->description}}</p>
         </div>
         <div class="col_right">
             <h3>advertisement</h3>
@@ -45,26 +45,10 @@
             <div class="artists">
                 <span class="title">Art By:</span>
                 <div class="artists_details">
-                    @foreach($comic['artists'] as $artist)
-                    <span>{{$artist}}</span>
-                    @if(!$loop->last)
-                    <span>,</span>
-                    @endif
-                    @endforeach
+                    <span>{{$comic->author}}</span>
                 </div>
             </div>
-            <div class="writers">
-                <span class="title">Written By:</span>
-                <div class="writers_details">
-                    @foreach($comic['writers'] as $writer)
-                    <span>{{$writer}}</span>
-                    @if(!$loop->last)
-                    <span>,</span>
-                    @endif
-                    @endforeach
 
-                </div>
-            </div>
         </div>
         <div class="col_6 specs">
             <h3>Specs</h3>
@@ -73,7 +57,7 @@
                     <span class="title">Series:</span>
                 </div>
                 <div class="col_6">
-                    <a href="#">{{$comic['series']}}</a>
+                    <a href="#">{{$comic->series}}</a>
                 </div>
 
             </div>
