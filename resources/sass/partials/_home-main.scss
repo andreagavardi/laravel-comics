@@ -26,23 +26,27 @@
         flex-wrap: wrap;
         justify-content: center;
         .comic {
-            max-height: 260px;
+            max-height: 300px;
             width: calc(100% / 4 - 2rem);
-            margin: 0 1rem;
-            img {
-                height: 260px;
-                width: 100%;
-                object-fit: cover;
-                object-position: top;
-            }
-            h4 {
-                font-size: 1.25rem;
-                color: white;
-                text-transform: uppercase;
-            }
+            margin: 1rem;
             a {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
                 &:hover {
                     text-decoration: none;
+                }
+
+                img {
+                    height: 260px;
+                    width: 100%;
+                    object-fit: cover;
+                    object-position: top;
+                }
+                h4 {
+                    font-size: 1.25rem;
+                    color: white;
+                    text-transform: uppercase;
                 }
             }
         }

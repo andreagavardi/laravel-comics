@@ -126,11 +126,19 @@ a.active {
   justify-content: center;
 }
 .comics_series .container .comic {
-  max-height: 260px;
+  max-height: 300px;
   width: calc(100% / 4 - 2rem);
-  margin: 0 1rem;
+  margin: 1rem;
 }
-.comics_series .container .comic img {
+.comics_series .container .comic a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.comics_series .container .comic a:hover {
+  text-decoration: none;
+}
+.comics_series .container .comic a img {
   height: 260px;
   width: 100%;
   -o-object-fit: cover;
@@ -138,13 +146,10 @@ a.active {
   -o-object-position: top;
      object-position: top;
 }
-.comics_series .container .comic h4 {
+.comics_series .container .comic a h4 {
   font-size: 1.25rem;
   color: white;
   text-transform: uppercase;
-}
-.comics_series .container .comic a:hover {
-  text-decoration: none;
 }
 
 .thumb {
