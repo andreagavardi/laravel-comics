@@ -33,17 +33,17 @@
         <div class="form-group">
             <label for="series">Serie</label>
             <input type="text" name="series" id="series" class="form-control" placeholder="serie" aria-describedby="prezzo" value="{{$comic->series}}">
-            <small id="prezz" class="text-muted">serie di appartenenza</small>
+            <small id="prezzo" class="text-muted">serie di appartenenza</small>
         </div>
         <div class="form-group">
             <label for="sale_date">Data di Uscita</label>
             <input type="text" name="sale_date" id="sale_date" class="form-control" placeholder="yyyy-mm-gg" aria-describedby="data" value="{{$comic->sale_date}}">
-            value="{{$comic->title}}" <small id="data" class="text-muted"></small>
+            <small id="data" class="text-muted"></small>
         </div>
         <div class="form-group">
             <label for="type">Genere</label>
             <input type="text" name="type" id="type" class="form-control" placeholder="" aria-describedby="type" value="{{$comic->type}}">
-            value="{{$comic->title}}" <small id="type" class="text-muted">Genere del fumetto</small>
+            <small id="type" class="text-muted">Genere del fumetto</small>
         </div>
         <div class="form-group">
             <label for="author">Autore</label>
