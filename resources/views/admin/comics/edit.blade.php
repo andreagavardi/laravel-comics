@@ -7,7 +7,7 @@
 <div class="container d-flex flex-column">
     <h1 class="align-self-center mt-2">Modifica</h1>
     @include('partials.errors')
-    <form action="{{route('comics.update',$comic->id)}}" method="POST">
+    <form action="{{route('admin.comics.update',$comic->id)}}" method="POST">
         @csrf
         @method('PUT')
         <div class="form-group">

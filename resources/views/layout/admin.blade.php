@@ -25,7 +25,26 @@
 
     <!-- main content specifico in ogni view-->
     <main id="main_content">
-        @yield('main_content')
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-2">
+                    <ul class="nav flex-column py-3">
+                        <li class="nav-item nav-pills">
+
+                            <a class="nav-link {{Route::currentRouteName() == 'admin.dashboard'? 'active': ''}}" href="{{route('admin.dashboard')}}"><i class="fas fa-tachometer-alt mr-2"></i> Dashboard</a>
+                        </li>
+                        <li class="nav-item nav-pills">
+                            <a class="nav-link {{Str::contains(Route::currentRouteName(),'comic')? 'active': ''}}" href="{{route('admin.comics.index')}}"><i class="fas fa-newspaper mr-2"></i> Comics</a>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="col-sm-10">
+                    @yield('main_content')
+
+                </div>
+            </div>
+        </div>
     </main>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

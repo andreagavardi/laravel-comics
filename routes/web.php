@@ -1,5 +1,6 @@
 <?php
 
+//use App\Http\Controllers\Admin\ComicController;
 use Faker\Guesser\Name;
 use Illuminate\Support\Facades\Route;
 
@@ -47,6 +48,12 @@ Route::get('/comics/{id}', function ($id) {
 })->name('comic'); */
 
 
-Route::resource('comics', 'ComicController'); //esercizio completo con model e controller
+Route::resource('comics', 'ComicController')->only(['index', 'show']); //esercizio completo con model e controller
 
 /* END Comics routes */
+
+Auth::routes();
+Route::middleware('auth')->prefix('admin')->namespace('Admin')->name('admin.')->group(function () {
+    Route::get('/', 'HomeController@index')->name('dashboard');
+    Route::resource('comics', ComicController::class);
+});

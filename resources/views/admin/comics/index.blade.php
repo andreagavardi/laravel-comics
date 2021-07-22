@@ -6,7 +6,7 @@
     <table class="table">
         <thead>
             <tr>
-                <th><a href="{{route('comics.create')}}">NEW COMIC <br><i class="far fa-plus-square"></i></a></th>
+                <th><a href="{{route('admin.comics.create')}}">NEW COMIC <br><i class="far fa-plus-square"></i></a></th>
                 <th>ID</th>
                 <th>TITOLO</th>
                 <th>IMAGE</th>
@@ -36,7 +36,7 @@
                 <td>{{$comic->created_at}}</td>
                 <td>{{$comic->updated_at}}</td>
                 <th><a href="{{route('comics.show',$comic->id)}}">VIEW |</a>
-                    <a href="{{route('comics.edit',$comic->id)}}">EDIT |</a>
+                    <a href="{{route('admin.comics.edit',$comic->id)}}">EDIT |</a>
                     <!-- Button trigger modal -->
                     <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#ModalId">
                         DELETE
@@ -63,7 +63,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <form action="{{route('comics.destroy',$comic->id)}}" method="post">
+                    <form action="{{route('admin.comics.destroy',$comic->id)}}" method="post">
                         @csrf
                         @method('DELETE')
                         <button type="submit" class="btn btn-danger">DELETE</button>

@@ -8,26 +8,61 @@
 
     </div>
     <div class="container">
-        <nav id="navbar">
-            <div class="logo">
-                <a href="{{route('home')}}"><img src="{{asset('img/dc-logo.png')}}" alt="logo dc"></a>
+        <nav id="navbar" class="navbar">
+            <div class=" navbar navbar-left flex-row">
+                <div class="logo">
+                    <a href="{{route('home')}}"><img src="{{asset('img/dc-logo.png')}}" alt="logo dc"></a>
+                </div>
+                <ul class="navbar mr-auto list-unstyled">
+                    <li class="nav-item">
+                        <a class="nav-link {{Str::contains(Route::currentRouteName(),'comic')? 'active': ''}}" href="{{route('comics.index')}}" class="">comics</a> <!-- route(comics.index) -->
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">news</a>
+                    </li>
+                    <div class="nav_search">
+                        <input type="text" name="search" id="search" placeholder="Search">
+                        <i class="fas fa-search fa-sm fa-fw"></i>
+                    </div>
+                </ul>
             </div>
-            <div class="nav_links">
-                <a href="#">characters</a>
-                <a href="{{route('comics.index')}}" class="{{Str::contains(Route::currentRouteName(),'comic')? 'active': ''}}">comics</a> <!-- route(comics.index) -->
-                <a href="#">movies</a>
-                <a href="#">tv</a>
-                <a href="#">games</a>
-                <a href="#">collectibles</a>
-                <a href="#">videos</a>
-                <a href="#">news</a>
-                <a href="#">shop</a>
-                <a href="{{route('admin.index')}}" class="admin">admin</a>
-            </div>
-            <div class="nav_search">
-                <input type="text" name="search" id="search" placeholder="Search">
-                <i class="fas fa-search fa-sm fa-fw"></i>
-            </div>
+
+            <ul class="navbar-nav ml-auto flex-row">
+
+                <!-- Authentication Links -->
+                @guest
+                <li class="nav-item">
+                    <a class="nav-link mr-3" href="{{ route('login') }}">{{ __('Login') }}</a>
+                </li>
+                @if (Route::has('register'))
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                </li>
+                @endif
+                @else
+                <li class="nav-item dropdown">
+                    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown">
+                        {{ Auth::user()->name }}
+                    </a>
+
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="{{ route('admin.dashboard') }}">
+                            {{ __('Dashboard') }}
+                        </a>
+                        <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                            {{ __('Logout') }}
+                        </a>
+
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                            @csrf
+                        </form>
+                    </div>
+                </li>
+                @endguest
+            </ul>
+
+
         </nav>
     </div>
 

@@ -15,38 +15,44 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 0;
-    .logo {
-        img {
-            width: 70px;
+    .navbar-left {
+        padding: 0;
+        ul {
+            margin-bottom: 0;
+            padding: 0 1rem;
         }
-    }
-    .nav_links {
-        a {
-            text-decoration: none;
-            text-transform: uppercase;
-            margin: 0 0.5rem;
-            font-size: 0.9rem;
-            font-weight: 800;
-            padding-bottom: 2.3rem;
-            &.admin {
-                font-size: 1.25rem;
-                border: 2px solid blue;
-                padding: 0.25rem 0.5rem;
-                border-radius: 0.5rem;
+        .logo {
+            img {
+                width: 70px;
             }
         }
-    }
-
-    .nav_search {
-        border-bottom: 2px solid $primary_blue;
-        input {
-            border-style: none;
-            text-align: end;
-            width: 100px;
-            &::placeholder {
-                color: $dark_color;
+        .nav-item {
+            a {
+                text-decoration: none;
+                text-transform: uppercase;
+                margin: 0 0.5rem;
+                font-size: 0.9rem;
                 font-weight: 800;
+
+                &.admin {
+                    font-size: 1.25rem;
+                    border: 2px solid blue;
+                    padding: 0.25rem 0.5rem;
+                    border-radius: 0.5rem;
+                }
+            }
+        }
+
+        .nav_search {
+            border-bottom: 2px solid $primary_blue;
+            input {
+                border-style: none;
+                text-align: end;
+                width: 100px;
+                &::placeholder {
+                    color: $dark_color;
+                    font-weight: 800;
+                }
             }
         }
     }
